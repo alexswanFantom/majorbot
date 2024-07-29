@@ -25,13 +25,13 @@ AUTO CLAIM FOR STAR / @major
 2. Clone this repository
 
    ```shell
-   git clone https://github.com/alexswanFantom/mayor.git
+   git clone https://github.com/alexswanFantom/majorbot.git
    ```
 
-3. goto mayor directory
+3. goto majorbot directory
 
    ```
-   cd mayor
+   cd majorbot
    ```
 
 4. install the require library
@@ -66,13 +66,13 @@ AUTO CLAIM FOR STAR / @major
 2. Clone this repository
 
    ```shell
-   git clone https://github.com/alexswanFantom/mayor.git
+   git clone https://github.com/alexswanFantom/majorbot.git
    ```
 
-3. goto mayor directory
+3. goto majorbot directory
 
    ```shell
-   cd mayor
+   cd majorbot
    ```
 
 4. Install the require library
@@ -107,13 +107,13 @@ AUTO CLAIM FOR STAR / @major
 2. Clone this repository
 
    ```shell
-   git clone https://github.com/akasakaid/mayor.git
+   git clone https://github.com/akasakaid/majorbot.git
    ```
 
-3. goto mayor directory
+3. goto majorbot directory
 
    ```
-   cd mayor
+   cd majorbot
    ```
 
 4. install the require library
