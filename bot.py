@@ -104,7 +104,8 @@ def spin_roulete(access_token):
       res = requests.post(url, headers=headers)
       if "blocked_until" in res.text.lower():
         timestamp = res.json()["detail"]["blocked_until"]
-        log(f"{YELLOW}you already spin in today, waiting{RESET} {RED}{strftime("%H:%M:%S", gmtime(timestamp))}{RESET} {YELLOW}Hours for next spin !")
+        blocked_time = strftime("%H:%M:%S", gmtime(timestamp))
+        log(f"{YELLOW}you already spin in today, waiting{RESET} {RED}{blocked_time}{RESET} {YELLOW}Hours for next spin !")
         return
       if "1" in res.text.lower():
         star = res.json()["rating_award"]
@@ -231,14 +232,14 @@ def save_failed_token(userid,data):
   acc[str(userid)] = data
   open(file,'w').write(json.dumps(acc,indent=4))
 
-def main():
-  
+def main(): 
   animation(15)
-  print(Fore.YELLOW + Style.BRIGHT + "Buy me a coffee and JARCOK :) 08383 5438 3569 DANA")
   query_id = open("query.txt", "r").read().splitlines()
   if len(query_id) <= 0:
     log(f"{RED}add data account in Query first")
     sys.exit()
+  log(f"{YELLOW}Buy me a coffee and JARCOK :) 08383 5438 3569 DANA")
+ 
   for no, data in enumerate(query_id):
     data_parse = data_parsing(data)
     user = json.loads(data_parse["user"])
