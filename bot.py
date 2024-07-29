@@ -216,9 +216,10 @@ def animation(delay):
   while time.time() < end_time:
     remaining_time = int(end_time - time.time())
     for frame in frames:
-      print(f"\r{CYAN}menunggu kopi dan jarum coklat{RESET} {MAGENTA}{frame}{RESET} {CYAN}Tersisa{RESET} {GRAY}{remaining_time}{RESET} {CYAN}detik{RESET}         ", end="", flush=True)
+      print(f"\r{CYAN}menunggu kopi dan jarum coklat{RESET} {MAGENTA}{frame}{RESET}{CYAN}Tersisa{RESET} {GRAY}{remaining_time}{RESET} {CYAN}detik{RESET}         ", end="", flush=True)
       time.sleep(interval/1000)
-
+    
+  
 #save failed access_token
 def save_failed_token(userid,data):
   file = "auth_failed.json"
@@ -234,12 +235,12 @@ def save_failed_token(userid,data):
 
 def main(): 
   animation(15)
+  print(f"\n{YELLOW}Buy me a coffee and JARCOK :) 08383 5438 3569 DANA")
   query_id = open("query.txt", "r").read().splitlines()
   if len(query_id) <= 0:
     log(f"{RED}add data account in Query first")
     sys.exit()
-  log(f"{YELLOW}Buy me a coffee and JARCOK :) 08383 5438 3569 DANA")
- 
+  
   for no, data in enumerate(query_id):
     data_parse = data_parsing(data)
     user = json.loads(data_parse["user"])
