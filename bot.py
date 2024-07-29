@@ -196,7 +196,7 @@ def complete_task(access_token, task):
       if res.status_code == 404:
         log(f"{RED}failed complete task !")
         return
-      if "True" in res.text:
+      if "True" in res.text or "true" in res.text:
         log(f"{GREEN}success complete task{RESET}{GRAY}{title} !")
       else:
         log(f"{RED}failed to complete task {RESET}{GRAY}{title} !")
